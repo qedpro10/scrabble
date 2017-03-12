@@ -11,6 +11,12 @@
 |
 */
 
+Route::any('/practice/{n?}', 'PracticeController@index');
+
+//Route::get('/', 'WelcomeController');
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
